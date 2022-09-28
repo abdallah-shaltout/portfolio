@@ -1,0 +1,106 @@
+:root {
+  --header_background: #{$header_background};
+  --header_logo: #{$header_logo};
+  --header_link: #{$header_link};
+  --header_link_hover: #{$header_link_hover};
+  --header_link_active_background: #{$header_link_active_background};
+  --header_link_active_color: #{$header_link_active_color};
+  --toggler_btn: #{$toggler_btn};
+  --toggler_btn_icon: #{$toggler_btn_icon};
+  --menu_background: #{$menu_background};
+}
+header {
+  background-color: var(--header_background);
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    @include flex_between;
+    .logo {
+      height: 72px;
+    }
+    ul.nav {
+      display: flex;
+      li {
+        a {
+          @include flex_center;
+          color: var(--header_link);
+          padding: 0 20px;
+          height: 72px;
+          background-color: transparent;
+          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+          &:hover,
+          &.router-link-active,
+          &.router-link-exact-active {
+            background-image: $bg-gradient;
+            background-color: var(--header_link_active_background);
+            color: var(--header_link_active_color);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    .container {
+      .navbar-toggler {
+        background-image: $bg-gradient;
+        background-color: var(--toggler_btn);
+        padding: 15px 10px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+        .navbar-toggler-icon {
+          transition: transform 0.3s ease, opacity 0.1s 0.1s ease;
+          display: block;
+          width: 30px;
+          background-color: var(--toggler_btn_icon);
+          height: 3px;
+          border-radius: 4px;
+          &:not(:last-of-type) {
+            margin-bottom: 4px;
+          }
+        }
+        &.active {
+          .navbar-toggler-icon:first-child {
+            transform: translateY(7px) rotate(45deg);
+          }
+          .navbar-toggler-icon:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+          }
+          .navbar-toggler-icon:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+          }
+        }
+        &.active ul.nav {
+          display: block;
+        }
+      }
+      ul.nav {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--menu_background);
+        transform: translateY(100%) scaleY(0);
+        width: 100%;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+        transform-origin: top;
+        li {
+          a {
+            justify-content: flex-start;
+            height: auto;
+            padding: 15px 10%;
+          }
+        }
+      }
+      ul.nav.active {
+        transform: translateY(100%) scaleY(1);
+        z-index: 32;
+      }
+    }
+  }
+}

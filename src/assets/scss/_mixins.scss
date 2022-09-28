@@ -1,0 +1,28 @@
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+$bg-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 6px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}

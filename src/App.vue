@@ -29,10 +29,10 @@ const ScrollToTop = () => {
 };
 const currentScroll = ref(0);
 
-onBeforeMount(async () => {
-    await store.getProjects();
-    await store.getSkills();
-    await store.getMessages();
+onBeforeMount(() => {
+    store.getProjects();
+    store.getSkills();
+    store.getMessages();
 });
 window.addEventListener("scroll", function () {
     currentScroll.value = this.scrollY;

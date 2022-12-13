@@ -199,5 +199,6 @@ export const useStore = defineStore("main", () => {
         removeSkill,
         sendMessage,
         removeMessage,
+        loading,
     };
 });

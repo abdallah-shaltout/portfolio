@@ -28,7 +28,6 @@ const ScrollToTop = () => {
     });
 };
 const currentScroll = ref(0);
-
 onBeforeMount(() => {
     store.getProjects();
     store.getSkills();

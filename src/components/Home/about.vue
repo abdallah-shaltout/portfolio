@@ -7,15 +7,16 @@
                 <h3 class="font-bold text-2xl mb-6 text-white">Get to Know me!</h3>
                 <div class="flex flex-col gap-5 text-gray-300 leading-6 font-lato w-5/6 sm:mx-auto">
                     <p class="xs:text-sm">
-                        I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects
-                        section.
+                        I'm a <b class="text-secondary">Frontend Web Developer</b> building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out
+                        some of my work in the <b>Projects</b> section.
                     </p>
                     <p class="xs:text-sm">
-                        I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects
-                        section.
+                        i also love <b>UI Design</b>, feel free to contact me in
+                        <a href="https://www.facebook.com/abdullahshaltout/" class="font-bold text-secondary/90 trans hover:text-secondary">Messenger</a> to make contact easy for us
                     </p>
                     <p class="xs:text-sm">
-                        I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+                        I'm open to <b>Job</b> opportunities where I can contribute, <b>learn</b> and <b>grow</b>. If you have a good opportunity that matches my <b>skills</b> and experience then
+                        don't hesitate to <b>contact</b> me.
                     </p>
                 </div>
                 <a href="#contact" class="btn-1 mt-8 sm:mx-auto">Get in touch</a>

@@ -55,8 +55,11 @@ export const useStore = defineStore("main", () => {
     const Login = async (payload) => {
         const { email, password } = payload;
         loading.value = true;
-        await signInWithEmailAndPassword(auth, email, password).then(() => router.push({ name: "admin" }));
-        loading.value = false;
+        await signInWithEmailAndPassword(auth, email, password)
+            .then(() => router.push({ name: "admin" }))
+            .catch(() => {
+                loading.value = false;
+            });
     };
     const LogOut = async () => {
         await signOut(auth);

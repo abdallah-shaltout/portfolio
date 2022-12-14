@@ -10,7 +10,7 @@
                     <Transition name="fade-in">
                         <div class="mb-2">
                             <p v-for="(err, idx) in err" :key="idx" class="text-rose-400 text-sm text-center mb-1">{{ err }}</p>
-                            <p v-if="send_successfully" class="text-green-400 text-base text-center mb-1">Send Successfully</p>
+                            <p v-if="send_successfully" class="text-green-400 text-base text-center mb-1">Sent Successfully</p>
                         </div>
                     </Transition>
                     <label class="flex flex-col gap-2">

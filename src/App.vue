@@ -36,7 +36,4 @@ onBeforeMount(() => {
 window.addEventListener("scroll", function () {
     currentScroll.value = this.scrollY;
 });
-
-console.log("env variable ViteAppTitle =>", import.meta.env.VITE_APP_TITLE);
-console.log("All env Variable =>", import.meta.env);
 </script>

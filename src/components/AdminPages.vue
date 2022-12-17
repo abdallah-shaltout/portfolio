@@ -1,25 +1,25 @@
 <template>
     <ul>
         <li>
-            <router-link @click="closeMenu" :to="{ name: 'profile' }" class="capitalize" :class="TheClass"> Profile</router-link>
+            <router-link @click="closeMenu" :to="{ name: 'profile' }" :class="TheClass"> Profile</router-link>
         </li>
         <li>
-            <router-link @click="closeMenu" :to="{ name: 'AddProject' }" class="capitalize" :class="TheClass">add project</router-link>
+            <router-link @click="closeMenu" :to="{ name: 'AddProject' }" :class="TheClass">add project</router-link>
         </li>
         <li>
-            <router-link @click="closeMenu" :to="{ name: 'AddSkill' }" class="capitalize" :class="TheClass">add Skill</router-link>
+            <router-link @click="closeMenu" :to="{ name: 'AddSkill' }" :class="TheClass">add Skill</router-link>
         </li>
         <li>
-            <router-link @click="closeMenu" :to="{ name: 'AdminProjects' }" class="capitalize" :class="TheClass"> Projects</router-link>
+            <router-link @click="closeMenu" :to="{ name: 'AdminProjects' }" :class="TheClass"> Projects</router-link>
         </li>
         <li>
-            <router-link @click="closeMenu" :to="{ name: 'AdminSkills' }" class="capitalize" :class="TheClass"> Skills</router-link>
+            <router-link @click="closeMenu" :to="{ name: 'AdminSkills' }" :class="TheClass"> Skills</router-link>
         </li>
         <li>
-            <router-link @click="closeMenu" :to="{ name: 'messages' }" class="capitalize" :class="TheClass"> Messages</router-link>
+            <router-link @click="closeMenu" :to="{ name: 'messages' }" :class="TheClass"> Messages</router-link>
         </li>
         <li>
-            <button @click="logout" :class="TheClass" class="capitalize">Logout</button>
+            <button @click="logout" :class="TheClass" class="text-secondary/80 font-semibold hover:text-secondary md:before:bg-white">Logout</button>
         </li>
     </ul>
 </template>

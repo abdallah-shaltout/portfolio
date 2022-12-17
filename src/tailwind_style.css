@@ -1,24 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    background-image: url("@/assets/images/second_landing.jpg");
-    background-position: revert;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: darken;
-    font-family: "Source Sans Pro", sans-serif;
-}
-.container {
-    width: 82.5%;
-    max-width: 1170px;
-}
-@media (max-width: 768px) {
-    .container {
-        width: 92.5%;
-    }
-}
+
 
 @layer components {
     .trans {
@@ -31,13 +14,13 @@ body {
         @apply flex justify-between items-center;
     }
     .page-link-1 {
-        @apply text-gray-400 trans hover:text-white;
+        @apply text-gray-400 trans hover:text-white capitalize;
     }
     .page-link-1.router-link-exact-active {
         @apply text-white;
     }
     .page-link-2 {
-        @apply text-gray-500 trans hover:text-white relative mx-auto  w-fit block py-3 text-lg overflow-hidden before:content-[''] before:absolute before:bg-secondary before:w-full before:h-[3px] before:rounded-lg before:-left-full  before:bottom-0  hover:before:left-0 before:transition-[left] before:duration-300 before:ease-in-out;
+        @apply text-gray-500 trans hover:text-white capitalize relative mx-auto  w-fit block py-3 text-lg overflow-hidden before:content-[''] before:absolute before:bg-secondary before:w-full before:h-[3px] before:rounded-lg before:-left-full  before:bottom-0  hover:before:left-0 before:transition-[left] before:duration-300 before:ease-in-out ;
     }
     .page-link-2.router-link-exact-active {
         @apply text-white before:left-0;

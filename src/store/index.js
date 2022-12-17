@@ -56,8 +56,13 @@ export const useStore = defineStore("main", () => {
         const { email, password } = payload;
         loading.value = true;
         await signInWithEmailAndPassword(auth, email, password)
-            .then(() => router.push({ name: "admin" }))
+            .then(() => {
+                router.push({ name: "admin" });
+            })
             .catch(() => {
+                console.log("Email Or Password is Wrong");
+            })
+            .finally(() => {
                 loading.value = false;
             });
     };

@@ -1,3 +1,22 @@
+body {
+    background-image: url("@/assets/images/landing.jpg");
+    background-position: revert;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.container {
+    width: 82.5%;
+    max-width: 1170px;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 92.5%;
+    }
+}
+
 .menu-line {
     fill: none;
     stroke: white;

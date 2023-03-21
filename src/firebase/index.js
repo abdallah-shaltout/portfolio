@@ -4,12 +4,12 @@ import { getAuth, signInWithEmailAndPassword, updatePassword, signOut, onAuthSta
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDBRKhM5DRstBRcEWjtNry_KfDKa8-1ecE",
-    authDomain: "shaltout-portfolio.firebaseapp.com",
-    projectId: "shaltout-portfolio",
-    storageBucket: "shaltout-portfolio.appspot.com",
-    messagingSenderId: "846308256321",
-    appId: "1:846308256321:web:bb5bc3f37f7d15eb7134c0",
+    apiKey: import.meta.env.VITE_APP_API_KEY,
+    authDomain: import.meta.env.VITE_APP_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_APP_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_APP_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_APP_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
